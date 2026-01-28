@@ -1,0 +1,44 @@
+﻿decision_add_amendment_prussian_education = {
+    is_shown = {
+
+        active_law:lawgroup_education_system ?= {
+            has_amendment = amendment_type:amendment_prussian_education
+        }
+    }
+
+    possible = {
+        
+		ig:ig_armed_forces = {
+			is_in_government = yes 
+		}
+
+		ig:ig_armed_forces = {
+            is_powerful = yes
+        }
+    }
+
+    when_taken = {
+        
+		root = {
+
+            active_law:lawgroup_education_system ?= {
+                    # 执行添加修正案
+                add_amendment = {
+                    type = amendment_prussian_education
+                        # PREV 指向上一层，即 root (国家)，从而定位到该国的军方
+                    sponsor = PREV.ig:ig_armed_forces
+                }
+            }
+        }
+    }
+        
+    ai_chance = {
+        value = 10
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			add = 20
+    	}
+	}
+}
