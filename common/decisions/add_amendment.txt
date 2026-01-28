@@ -1,8 +1,10 @@
 ﻿decision_add_amendment_prussian_education = {
     is_shown = {
-
-        active_law:lawgroup_education_system ?= {
-            has_amendment = amendment_type:amendment_prussian_education
+        has_law = law_type:law_public_schools
+        NOT={
+            active_law:lawgroup_education_system ?= {
+                has_amendment = amendment_type:amendment_prussian_education
+            }
         }
     }
 
