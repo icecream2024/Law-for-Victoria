@@ -29,13 +29,14 @@
                     type = amendment_prussian_education
                         # PREV 指向上一层，即 root (国家)，从而定位到该国的军方
                     sponsor = PREV.ig:ig_armed_forces
+                    cooldown = 120
                 }
             }
         }
     }
         
     ai_chance = {
-        value = 10
+        base = 10
 		if = {
 			limit = {
 				is_at_war = yes
