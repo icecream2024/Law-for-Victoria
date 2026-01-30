@@ -1,0 +1,23 @@
+country_enactment_success_chance_law_no_schools_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_enactment_success_chance_law_private_schools_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_enactment_success_chance_law_religious_schools_add = {
+	decimals = 1
+	color = bad
+	game_data = {
+		ai_value = 0
+	}
+}
