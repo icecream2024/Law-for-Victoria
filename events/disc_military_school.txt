@@ -71,6 +71,11 @@ disc_military_school.1 = {
 	option = {
 		name = disc_military_school.1.a
 		default_option = yes
+
+		add_journal_entry = {
+			type = je_military_school
+		}
+
 		ai_chance = {
 			base=5
 

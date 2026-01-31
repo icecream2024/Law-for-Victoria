@@ -1,0 +1,103 @@
+military_schools_progress_bar = {
+ 	name = "military_schools_progress_bar"
+ 	desc = "military_schools_progress_bar_desc"
+
+ 	default = yes
+	
+
+ 	weekly_progress = {
+ 		# Advance
+		if = {
+			limit = {
+				ig:ig_petty_bourgeoisie = {
+					is_powerful = yes
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				ig:ig_armed_forces = {
+					is_marginal = no
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				ig:ig_armed_forces = {
+					is_powerful = yes
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_public_schools
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_council_republic
+			}
+			add = 5
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_corporate_state
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_mass_conscription
+			}
+			add = 2
+		}
+ 		# Deplete
+		if = {
+			limit = {
+				ig:ig_intelligentsia = {
+					is_marginal = no
+				}
+			}
+			subtract = 1
+		}
+		if = {
+			limit = {
+				ig:ig_intelligentsia = {
+					is_powerful = yes
+				}
+			}
+			subtract = 1
+		}
+		if = {
+			limit = {
+				ig:ig_rural_folk = {
+					is_powerful = yes
+				}
+			}
+			subtract = 1
+		}
+		if = {
+			limit = {
+				ig:ig_trade_unions = {
+					is_powerful = yes
+				}
+			}
+			subtract = 1
+		}
+
+		if = {
+			limit = {
+				has_law = law_type:law_no_schools
+			}
+			subtract = 10
+		}
+	}
+
+ 	start_value = 60
+ 	min_value = 0
+ 	max_value = 120
+}

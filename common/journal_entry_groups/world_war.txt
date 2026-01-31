@@ -1,0 +1,3 @@
+je_group_world_war = {
+	context = country
+}

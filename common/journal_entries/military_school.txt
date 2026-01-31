@@ -1,0 +1,32 @@
+je_military_school = {
+	group = je_group_world_war
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	
+	scripted_progress_bar = military_schools_progress_bar
+
+	complete = {
+		scope:journal_entry = {
+			"scripted_bar_progress(military_schools_progress_bar)" = 120
+		}
+		OR = {
+			has_law = law_type:law_single_party_state
+			has_law = law_type:law_autocracy
+		}
+		OR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_corporate_state
+		}
+	}
+
+	fail = {
+		scope:journal_entry = {
+			"scripted_bar_progress(military_schools_progress_bar)" = 0
+		}
+		has_law = law_type:law_peasant_levies
+	}
+	
+
+	weight = 200
+    transferable = no
+	should_be_pinned_by_default = yes
+}
