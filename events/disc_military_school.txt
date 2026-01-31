@@ -23,33 +23,30 @@ disc_military_school.1 = {
 	duration = 3
 
 	trigger = {
+		
 		OR = {
-			AND = {
-				OR = {
-					has_law = law_type:law_monarchy
-					has_law = law_type:law_autocracy
-					has_law = law_type:law_single_party_state
-					has_law = law_type:law_technocracy
-					has_law = law_type:law_council_republic
-					has_law = law_type:law_corporate_state
+			has_law = law_type:law_monarchy
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_single_party_state
+			has_law = law_type:law_technocracy
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_corporate_state
 
-					has_variable = great_depression
-					has_variable = world_war
-					has_variable = preparing_world_war
-				}	
-				OR = {
-					has_law = law_type:law_professional_army
-					has_law = law_type:law_mass_conscription
-				}
-				ig:ig_armed_forces = {
-						is_marginal = no
-				}
-				NOT = {
-					has_law = law_type:law_no_schools
-				}
-			}
-			
+			has_variable = great_depression
+			has_variable = world_war
+			has_variable = preparing_world_war
+		}	
+		OR = {
+			has_law = law_type:law_professional_army
+			has_law = law_type:law_mass_conscription
 		}
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_law = law_type:law_no_schools
+		}
+
 	}
 
 	cancellation_trigger = {
@@ -67,10 +64,30 @@ disc_military_school.1 = {
 	option = {
 		name = disc_military_school.1.a
 		default_option = yes
+		ai_chance = {
+			base=5
+
+			modifier = {
+				trigger = {
+					has_variable = great_depression
+				}
+				add = 50
+			}
+
+			modifier = {
+				trigger = {
+					has_variable = world_war
+				}
+				add = 100
+			}
+		}
 	}
 
 	option = {
 		name = disc_military_school.1.b
+		ai_chance = {
+			base = 5
+		}
 	}
 
 }
