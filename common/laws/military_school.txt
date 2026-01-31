@@ -1,6 +1,5 @@
 ﻿law_military_schools = {
 	group = lawgroup_education_system
-	parent = law_public_schools # Inherits ideological stances from parent
 
 	icon = "gfx/interface/icons/production_method_icons/unused/military_academy.dds"
 
@@ -14,20 +13,19 @@
 	institution = institution_schools
 	institution_modifier = {
 		country_education_fervor_add = 10
-		state_assimilation_mult = 0.15
-		state_education_access_add = 0.05
+		state_assimilation_mult = 0.1
+		state_education_access_add = 0.1
 		interest_group_ig_armed_forces_pol_str_mult = 0.1
-		building_training_rate_mult = 0.1
-		state_conscription_rate_add = 0.005
-		country_tech_spread_mult = -0.1
+		building_training_rate_mult = 0.05
+		state_conscription_rate_add = 0.002
+		country_tech_spread_mult = -0.02
 		country_military_tech_research_speed_mult = 0.05
+		country_radicalism_increases_violent_hostility_mult = 0.2
+		country_radicalism_increases_cultural_erasure_mult = 0.1
+		country_radicalism_increases_open_prejudice_mult = 0.05
+		country_loyalism_increases_full_acceptance_mult = 0.05
 	}
-	
-	modifier = {
-		country_enactment_success_chance_law_no_schools_add = -1
-		country_enactment_success_chance_law_private_schools_add = -1
-		country_enactment_success_chance_law_religious_schools_add = -1
-	}
+
 
 	# AI should never try to bring back serfdom
 	ai_will_do = {

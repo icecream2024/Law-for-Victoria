@@ -1,0 +1,76 @@
+namespace = disc_military_school
+
+# Debate Event - Opium of the Masses
+disc_military_school.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = disc_military_school.1.t
+	desc = disc_military_school.1.d
+	flavor = disc_military_school.1.f
+
+	category = enactment
+
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_autocracy
+					has_law = law_type:law_single_party_state
+					has_law = law_type:law_technocracy
+					has_law = law_type:law_council_republic
+					has_law = law_type:law_corporate_state
+
+					has_variable = great_depression
+					has_variable = world_war
+					has_variable = preparing_world_war
+				}	
+				OR = {
+					has_law = law_type:law_professional_army
+					has_law = law_type:law_mass_conscription
+				}
+				ig:ig_armed_forces = {
+						is_marginal = no
+				}
+				NOT = {
+					has_law = law_type:law_no_schools
+				}
+			}
+			
+		}
+	}
+
+	cancellation_trigger = {
+		has_law = law_type:law_military_schools
+	}
+
+	cooldown = { days = normal_modifier_time }
+
+	immediate = {
+		law_type:law_military_schools = {
+			save_scope_as = military_schools_law
+		}
+	}
+
+	option = {
+		name = disc_military_school.1.a
+		default_option = yes
+	}
+
+	option = {
+		name = disc_military_school.1.b
+	}
+
+}
