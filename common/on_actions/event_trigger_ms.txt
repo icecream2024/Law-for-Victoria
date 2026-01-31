@@ -1,0 +1,10 @@
+on_monthly_pulse_country = {
+	on_actions = {
+    	new_ms_event
+    }
+}
+new_ms_event = {
+	events = {
+		disc_military_school.1
+	}
+}
