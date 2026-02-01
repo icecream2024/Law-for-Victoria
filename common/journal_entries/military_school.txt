@@ -5,9 +5,13 @@ je_military_school = {
 	scripted_progress_bar = military_schools_progress_bar
 
 	complete = {
-		scope:journal_entry = {
-			"scripted_bar_progress(military_schools_progress_bar)" = 120
+		custom_tooltip = {
+			text = je_military_schools_complete_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(military_schools_progress_bar)" = 120
+			}
 		}
+	
 		OR = {
 			has_law = law_type:law_single_party_state
 			has_law = law_type:law_autocracy
@@ -19,14 +23,17 @@ je_military_school = {
 	}
 
 	fail = {
-		scope:journal_entry = {
-			"scripted_bar_progress(military_schools_progress_bar)" = 0
+		custom_tooltip = {
+			text = je_military_schools_fail_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(military_schools_progress_bar)" = 0
+			}
 		}
 		has_law = law_type:law_peasant_levies
 	}
 	
 
-	weight = 200
+	weight = 400
     transferable = no
 	should_be_pinned_by_default = yes
 }

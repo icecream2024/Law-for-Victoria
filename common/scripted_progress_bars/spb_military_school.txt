@@ -13,7 +13,10 @@ military_schools_progress_bar = {
 					is_powerful = yes
 				}
 			}
-			add = 1
+			add = {
+				desc = military_schools_progress_bar_petty_bourgeoisie_forces_powerful
+				value = 1
+			}
 		}
 		if = {
 			limit = {
@@ -21,7 +24,10 @@ military_schools_progress_bar = {
 					is_marginal = no
 				}
 			}
-			add = 1
+			add = {
+				desc = military_schools_progress_bar_armed_forces_marginal
+				value = 1
+			}
 		}
 		if = {
 			limit = {
@@ -29,31 +35,46 @@ military_schools_progress_bar = {
 					is_powerful = yes
 				}
 			}
-			add = 1
+			add = {
+				desc = military_schools_progress_bar_armed_forces_powerful
+				value = 1
+			}
 		}
 		if = {
 			limit = {
 				has_law = law_type:law_public_schools
 			}
-			add = 1
+			add = {
+				desc = military_schools_progress_bar_public_schools
+				value = 1
+			}
 		}
 		if = {
 			limit = {
 				has_law = law_type:law_council_republic
 			}
-			add = 5
+			add = {
+				desc = military_schools_progress_bar_council_republic
+				value = 5
+			}
 		}
 		if = {
 			limit = {
 				has_law = law_type:law_corporate_state
 			}
-			add = 10
+			add = {
+				desc = military_schools_progress_bar_corporate_state
+				value = 10
+			}
 		}
 		if = {
 			limit = {
 				has_law = law_type:law_mass_conscription
 			}
-			add = 2
+			add = {
+				desc = military_schools_progress_bar_mass_conscription
+				value = 2
+			}
 		}
  		# Deplete
 		if = {
@@ -62,7 +83,10 @@ military_schools_progress_bar = {
 					is_marginal = no
 				}
 			}
-			subtract = 1
+			subtract = {
+				desc = military_schools_progress_bar_intelligentsia_forces_marginal
+				value = 1
+			}
 		}
 		if = {
 			limit = {
@@ -70,7 +94,10 @@ military_schools_progress_bar = {
 					is_powerful = yes
 				}
 			}
-			subtract = 1
+			subtract = {
+				desc = military_schools_progress_bar_intelligentsia_forces_powerful
+				value = 1
+			}
 		}
 		if = {
 			limit = {
@@ -78,7 +105,10 @@ military_schools_progress_bar = {
 					is_powerful = yes
 				}
 			}
-			subtract = 1
+			subtract = {
+				desc = military_schools_progress_bar_rural_folk_forces_powerful
+				value = 1
+			}
 		}
 		if = {
 			limit = {
@@ -86,7 +116,10 @@ military_schools_progress_bar = {
 					is_powerful = yes
 				}
 			}
-			subtract = 1
+			subtract = {
+				desc = military_schools_progress_bar_trade_unions_forces_powerful
+				value = 1
+			}
 		}
 
 		if = {
