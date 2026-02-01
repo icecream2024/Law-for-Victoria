@@ -174,7 +174,7 @@ disc_military_school.3 = {
 	flavor = disc_military_school.3.f
 
 	event_image = {
-		video = ""
+		video = "unspecific_politicians_arguing"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
