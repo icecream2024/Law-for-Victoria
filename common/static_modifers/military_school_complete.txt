@@ -1,4 +1,9 @@
-﻿je_military_schools_modifier={
+﻿je_military_schools_complete_modifier={
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	interest_group_ig_armed_forces_pol_str_mult = 0.5
+}
+
+je_military_schools_fail_modifier={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_ig_armed_forces_approval_add = -5
 }

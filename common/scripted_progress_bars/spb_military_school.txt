@@ -1,4 +1,4 @@
-military_schools_progress_bar = {
+﻿military_schools_progress_bar = {
  	name = "military_schools_progress_bar"
  	desc = "military_schools_progress_bar_desc"
 

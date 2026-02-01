@@ -1,4 +1,4 @@
-country_enactment_success_chance_law_no_schools_add = {
+﻿country_enactment_success_chance_law_no_schools_add = {
 	decimals = 1
 	color = bad
 	game_data = {

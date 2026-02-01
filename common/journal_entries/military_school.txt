@@ -1,4 +1,4 @@
-je_military_school = {
+﻿je_military_school = {
 	group = je_group_world_war
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	
