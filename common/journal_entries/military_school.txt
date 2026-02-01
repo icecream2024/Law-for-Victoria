@@ -5,20 +5,29 @@ je_military_school = {
 	scripted_progress_bar = military_schools_progress_bar
 
 	complete = {
-		custom_tooltip = {
-			text = je_military_schools_complete_tt
-			scope:journal_entry = {
-				"scripted_bar_progress(military_schools_progress_bar)" = 120
+		OR={
+			custom_tooltip = {
+				text = je_military_schools_complete_tt
+				scope:journal_entry = {
+					"scripted_bar_progress(military_schools_progress_bar)" = 120
+				}
 			}
+			AND = {
+				OR = {
+					has_law = law_type:law_single_party_state
+					has_law = law_type:law_autocracy
+				}
+				OR = {
+					has_law = law_type:law_council_republic
+					has_law = law_type:law_corporate_state
+				}
+			}	
 		}
-	
-		OR = {
-			has_law = law_type:law_single_party_state
-			has_law = law_type:law_autocracy
-		}
-		OR = {
-			has_law = law_type:law_council_republic
-			has_law = law_type:law_corporate_state
+	}
+
+	on_complete = {
+		events ={
+			disc_military_school.2
 		}
 	}
 
@@ -32,6 +41,11 @@ je_military_school = {
 		has_law = law_type:law_peasant_levies
 	}
 	
+	on_fail = {
+		events ={
+			disc_military_school.3
+		}
+	}
 
 	weight = 400
     transferable = no

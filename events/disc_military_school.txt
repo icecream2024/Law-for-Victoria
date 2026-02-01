@@ -9,8 +9,6 @@ disc_military_school.1 = {
 	desc = disc_military_school.1.d
 	flavor = disc_military_school.1.f
 
-	category = enactment
-
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
@@ -31,7 +29,7 @@ disc_military_school.1 = {
 			
 			AND = {
 				OR = {
-					has_law = law_type:law_monarchy
+					has_law = law_type:law_oligarchy
 					has_law = law_type:law_autocracy
 					has_law = law_type:law_single_party_state
 					has_law = law_type:law_technocracy
@@ -100,6 +98,116 @@ disc_military_school.1 = {
 		ai_chance = {
 			base = 5
 		}
+	}
+
+}
+
+disc_military_school.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = disc_military_school.2.t
+	desc = disc_military_school.2.d
+	flavor = disc_military_school.2.f
+
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	option = {
+		name = disc_military_school.2.a
+	
+		default_option = yes
+
+		if = {
+			limit = {
+				NOT = { has_law = law_type:law_outlawed_dissent}
+			}
+			activate_law = law_type:law_censorship
+		}
+
+		if = {
+			limit = {
+				NOT = { has_law = law_type:law_ethnostate}
+			}
+			activate_law = law_type:law_national_supremacy
+		}
+
+		if = {
+			limit = { has_law = law_type:guaranteed_liberties }
+			activate_law = law_type:law_national_guard
+		}
+
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_military_schools
+		add_modifier = {
+			name = je_military_schools_complete_modifier
+			years = 5
+			is_decaying = yes
+		}
+		add_loyalists = {
+			value = 0.5
+			pop_type = officers
+		}
+		add_loyalists = {
+			value = 0.2
+			pop_type = soldiers
+		}
+	}
+}
+
+disc_military_school.3 = {
+	type = country_event
+	placement = ROOT
+
+	title = disc_military_school.3.t
+	desc = disc_military_school.3.d
+	flavor = disc_military_school.3.f
+
+	event_image = {
+		video = ""
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = normal_modifier_time }
+
+	option = {
+		name = disc_military_school.3.a
+	
+		default_option = yes
+
+		activate_law = law_type:law_professional_army
+		
+		add_modifier = {
+			name = je_military_schools_fail_modifier
+			years = 5
+			interest_group_ig_armed_forces_approval_add = -5
+		}
+
+		add_radicals = {
+			value = 10
+			pop_type = officers
+		}
+
+		add_radicals = {
+			value = 20
+			pop_type = soldiers
+		}
+
 	}
 
 }
