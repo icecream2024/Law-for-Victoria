@@ -26,8 +26,9 @@ je_military_school = {
 	}
 
 	on_complete = {
-		events ={
-			disc_military_school.2
+		trigger_event = {
+			id = disc_military_school.2
+			popup = yes
 		}
 	}
 
@@ -42,8 +43,9 @@ je_military_school = {
 	}
 	
 	on_fail = {
-		events ={
-			disc_military_school.3
+		trigger_event = {
+			id = disc_military_school.3
+			popup = yes
 		}
 	}
 
