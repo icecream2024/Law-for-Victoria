@@ -34,8 +34,8 @@
  je_military_schools_complete_modifier: "完成军事学校立法"
  
  disc_military_school.3.t: "改革失败"
- disc_military_school.3.d: "军事化教育改革未能通过，军队与政府之间的裂痕进一步扩大。"
- disc_military_school.3.f: "会议持续了整整一天，却没有结果。知识分子反对，工会代表警惕，农民代表沉默。改革被搁置，但不满并未消失。"
+ disc_military_school.3.d: "军事化教育改革未能通过，军队与政府之间的裂痕进一步扩大。会议持续了整整一天，却没有结果。知识分子反对，工会代表警惕，农民代表沉默。改革被搁置，但不满并未消失。"
+ disc_military_school.3.f: "工会代表在夜间会议上翻阅一份草案。上面写着：“战时动员预案（草拟）”。有人低声说：“他们说这是为了保卫国家。”另一人冷笑：“可名单上，全是我们的孩子。”灯被熄灭，文件被锁进抽屉，却没有被销毁。"
  disc_military_school.3.a: "那么就这样吧。"
  je_military_schools_fail_modifier: "军事学校立法失败"
  
